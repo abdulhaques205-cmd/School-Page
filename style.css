@@ -1,0 +1,188 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+.header {
+  background-color: #0057b7;
+  padding: 15px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #f0f4f8;
+  padding: 60px 0;
+}
+
+.hero-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.btn {
+  background-color: #0057b7;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #003f8a;
+}
+
+/* Hero Image with background image */
+.hero-image {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  background-color: #0057b7;
+
+  /* Add your image below - change URL to your actual image */
+  background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=400&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Floating label inside hero image */
+.floating-label {
+  position: absolute;
+  bottom: -25px;
+  right: -25px;
+  background: white;
+  color: #0057b7;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Features Section */
+.features {
+  padding: 60px 0;
+}
+
+.feature-flex {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.feature-card {
+  flex: 1;
+  background-color: #e6e9f0;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.feature-card h3 {
+  margin-bottom: 15px;
+  color: #003f8a;
+}
+
+.feature-card p {
+  color: #333;
+  font-size: 16px;
+}
+
+/* Footer */
+.footer {
+  background-color: #003f8a;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-flex,
+  .feature-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .floating-label {
+    position: static;
+    margin-top: 15px;
+    box-shadow: none;
+  }
+
+  .feature-card {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 20px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
